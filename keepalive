@@ -1,0 +1,23 @@
+#nginx+keepalive
+#keepalive 配置
+! Configuration File for keepalived
+
+global_defs {
+   router_id NGINX_DEVEL
+}
+
+vrrp_instance VI_1 {
+    state MASTER
+    interface enp0s3
+    virtual_router_id 51
+    priority 100
+    advert_int 1
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        172.16.10.200/24
+    }
+}
+

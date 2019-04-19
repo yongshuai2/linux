@@ -1,4 +1,4 @@
-#nginx+keepalive
+#nginx+keepalive 0419:10.13
 #keepalive 配置
 ! Configuration File for keepalived
 
